@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Wandy`s IPA Website</title>
-  </head>
-  <body>
-    <h1>Hello from Wanderson's IPA Website 🎧</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPA Phonetics Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎓 IPA Phonetics Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>IPA Symbol</th>
+        <th>Sound</th>
+        <th>Example</th>
+        <th>Try it Yourself</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/iː/</td>
+        <td><button onclick="playSound('i-long')">🔊</button></td>
+        <td>seat</td>
+        <td><input type="text" placeholder="Type your example..." /></td>
+      </tr>
+      <tr>
+        <td>/æ/</td>
+        <td><button onclick="playSound('ae')">🔊</button></td>
+        <td>cat</td>
+        <td><input type="text" placeholder="Type your example..." /></td>
+      </tr>
+      <tr>
+        <td>/ʌ/</td>
+        <td><button onclick="playSound('uh')">🔊</button></td>
+        <td>cup</td>
+        <td><input type="text" placeholder="Type your example..." /></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function playSound(symbol) {
+      const audio = new Audio(`sounds/${symbol}.mp3`);
+      audio.play();
+    }
+  </script>
+</body>
 </html>
+
+<button onclick="playSound('i-long')">🔊</button>
+<button onclick="playSound('ae')">🔊</button>
+<button onclick="playSound('uh')">🔊</button>
+<script>
+  function playSound(symbol) {
+    const audio = new Audio(`sounds/${symbol}.mp3`);
+    audio.play();
+  }
+</script>
