@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPA Learning Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎓 IPA Phonetics Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>IPA Symbol</th>
+        <th>Sound</th>
+        <th>Example</th>
+        <th>Try it Yourself</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/iː/</td>
+        <td><button onclick="playSound('iː')">🔊</button></td>
+        <td>seat</td>
+        <td><input type="text" placeholder="Type your example..."></td>
+      </tr>
+      <tr>
+        <td>/æ/</td>
+        <td><button onclick="playSound('æ')">🔊</button></td>
+        <td>cat</td>
+        <td><input type="text" placeholder="Type your example..."></td>
+      </tr>
+      <tr>
+        <td>/ʌ/</td>
+        <td><button onclick="playSound('ʌ')">🔊</button></td>
+        <td>cup</td>
+        <td><input type="text" placeholder="Type your example..."></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function playSound(symbol) {
+      const audio = new Audio(`sounds/${symbol}.mp3`);
+      audio.play();
+    }
+  </script>
+</body>
+</html>
 
