@@ -20,9 +20,8 @@
     <tbody>
       <tr>
         <td>/iː/</td>
-        <td><button onclick="playSound('i-long')">🔊</button></td>
         <td>seat</td>
-        <td><input type="text" placeholder="Type your example..." /></td>
+        <td><input type="text" placeholder="Type a word" /></td>
       </tr>
       <tr>
         <td>/æ/</td>
@@ -40,10 +39,7 @@
   </table>
 
   <script>
-    function playSound(symbol) {
-      const audio = new Audio(`sounds/${symbol}.mp3`);
-      audio.play();
-    }
+    function playSound(symbol) {const audio = new Audio(`sounds/${symbol}.mp3`); audio.play();}
   </script>
 </body>
 </html>
@@ -52,8 +48,5 @@
 <button onclick="playSound('ae')">🔊</button>
 <button onclick="playSound('uh')">🔊</button>
 <script>
-  function playSound(symbol) {
-    const audio = new Audio(`sounds/${symbol}.mp3`);
-    audio.play();
-  }
+  function playSound(symbol) {const audio = new Audio(`sounds/${symbol}.mp3`); audio.play();}
 </script>
